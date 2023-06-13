@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changing Word Slider</title>
+
+    <style>
+
+        body{
+            background-color:darkslategrey;
+        }
+        .wordchanger::before{
+            content: "Hello";
+            animation-name: mywordchange;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease;
+            font-size: 800;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            margin-top: 20px;
+            color: #ABC9DC;
+
+        }
+
+        @keyframes mywordchange{
+            0%{content: "Hello!!"}
+            50%{content: "Welcome"}
+            100%{content: "To"}
+
+        }
+
+        h1{
+            font-size: 800;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            margin-top: 20px;
+            color: #fff;
+        }
+
+        .container{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h1 class="wordchanger"></h1>
+    <h1>FameTrade</h1>
+</div>
+</body>
+</html>
